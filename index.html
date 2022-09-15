@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Sistema Bancário</title>
 </head>
 <body>
     <h1>Sistema Bancário</h1>
-    <form>
+    <form id="form-conta">
         Numero: <input id="numero"> <br>
         Saldo: <input id="saldo">
         <button onclick="contaController.inserir(event)">Inserir</button>
@@ -17,8 +17,12 @@
     <script src="app/js/modelo/repositorio-contas.js"></script>
     <script src="app/js/modelo/pessoa.js"></script>
     <script src="app/js/modelo/pessoa-fisica.js"></script>
-    <script src="app/js/modelo/pessoa-juridica.js"></script>    
+    <script src="app/js/modelo/pessoa-juridica.js"></script>
+    <script src="app/js/modelo/cliente.js"></script>
+    <script src="app/js/modelo/empresa.js"></script>
+    <script src="app/js/modelo/repositorio-pessoa.js"></script>
     <script src="app/js/controlador/conta-controller.js"></script>
+    <script src="app/js/controlador/pessoa-controller.js"></script>
     <script src="app/js/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 class PessoaJuridica extends Pessoa {
 
     readonly _cnpj: string;
@@ -12,5 +13,4 @@ class PessoaJuridica extends Pessoa {
     get cnpj(): string {
         return this._cnpj;
     }
-
 }

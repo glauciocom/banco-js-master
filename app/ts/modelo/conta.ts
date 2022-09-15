@@ -1,5 +1,3 @@
-
-
 class Conta {
 
     //modificadores de acesso
@@ -10,7 +8,6 @@ class Conta {
         // private: apenas a classe
         // protected: classes da herança
 
-
     // TS
         // vazio ou public
         // private
@@ -20,7 +17,7 @@ class Conta {
     public nome: string;
     private readonly _numero: string;
 
-    constructor(numero: string, private saldo=0) {
+    constructor(numero: string, protected saldo=0) {
         this._numero = numero;
     }
 

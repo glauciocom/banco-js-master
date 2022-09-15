@@ -1,7 +1,6 @@
 const c1 = new Conta('1', 100);
 const c2 = new Conta('2');
 
-
 console.log(c1.numero);
 const contaController = new ContaController();
 contaController.adicionarConta(c1);
@@ -37,6 +36,50 @@ console.log(`Idade: ${p3.idade} anos`);
 console.log(`Data de constituição: ${p3.dataNascimento.getUTCDate()}/${p3.dataNascimento.getMonth()+1}/${p3.dataNascimento.getFullYear()}`);
 console.log(`CNPJ: ${p3.cnpj}`);
 
+// Criação de 3 clientes e 3 empresas.
+const dataUm = new Date('1985-1-10');
+const clienteUm =  new Cliente("Eva", 37, dataUm ,'98765432111');
+const contaUmClienteUm = new Conta('3',39);
+const contaDoisClienteUm = new Conta('4', 61);
+clienteUm.acrescentarConta(contaUmClienteUm);
+clienteUm.acrescentarConta(contaDoisClienteUm);
+const dataDois = new Date('1975-1-10');
+const clienteDois =  new Cliente("Lily", 47, dataDois ,'879654322222');
+const dataTres = new Date('1965-1-10');
+const clienteTres =  new Cliente("Raul", 57, dataTres ,'79865432333');
+
+const dataConstUm = new Date('1985-1-10');
+const empresaUm =  new Empresa("Livros Ltda", 37, dataConstUm ,'31298765432111');
+const dataConstDois = new Date('1975-1-10');
+const empresaDois =  new Empresa("Cadeiras Ltda", 47, dataConstDois ,'23198765432111');
+const dataConstTres = new Date('1965-1-10');
+const empresaTres =  new Empresa("Mesas Ltda", 57, dataConstTres ,'12398765432111');
+
+console.log('.');
+console.log('### Clientes e Empresas');
+
+console.log(clienteUm);
+console.log('#');
+console.log(`Saldo da conta 1 do Cliente 1: ${contaUmClienteUm.getSaldo()}`);
+console.log(`Saldo da conta 2 do Cliente 1: ${contaDoisClienteUm.getSaldo()}`);
+console.log(`Saldo total do Cliente 1: ${clienteUm.saldoTotalContas()}`);
+console.log(`Média do saldo do Cliente 1: ${clienteUm.mediaSaldoContas()}`);
+
+
+
+console.log(clienteDois);
+console.log(clienteTres);
+
+console.log(empresaUm);
+console.log(empresaDois);
+console.log(empresaTres);
+
+console.log(clienteUm.nome)
+
+// pessoaController
+const pessoaController = new PessoaController();
+pessoaController.adicionarPessoa(empresaUm);
+pessoaController.listar();
 
 // const repContas = new RepositorioContas();
 //

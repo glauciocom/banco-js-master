@@ -1,4 +1,5 @@
 class ContaBonificada extends Conta {
+
     constructor(numero: string, saldo: number) {
         super(numero, saldo);
     }
